@@ -1,0 +1,7 @@
+<button (click)='onClick()'>Загрузить</button>
+<ul>
+  <li *ngFor='let item of projects'>
+    {{item.Id}}, {{item.Title}} - {{item.DateCreated | date}}
+  </li>
+</ul>
+
