@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width" />
+	<title>@ViewBag.Title</title>
+	@Styles.Render("~/Content/css")
+	@Scripts.Render("~/bundles/modernizr")
+	@Scripts.Render("~/bundles/knockout")
+	@Scripts.Render("~/bundles/popper")
+	@Scripts.Render("~/bundles/jquery")
+	@Scripts.Render("~/bundles/momentjs")
+	@Scripts.Render("~/bundles/lodash")
+	@Scripts.Render("~/bundles/bootstrap")
+</head>
+<body>
+	<div class="container body-content">
+		@RenderBody()
+		<hr />
+		<footer>
+			<p>&copy; @DateTime.Now.Year - Ершов Дмитрий</p>
+		</footer>
+	</div>
+
+	@RenderSection("scripts", required: false)
+</body>
+</html>

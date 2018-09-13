@@ -1,0 +1,42 @@
+﻿<div class="jumbotron">
+	<h1>Контрольная работа</h1>
+	<p class="lead">
+        <button data-bind="click: addNew">Добавить пользователя</button>
+	</p>
+</div>
+<div>
+    <input data-bind="textInput: userLastName" type="text" size="40" placeholder="Фамилия">
+    <input data-bind="textInput: userFirstName" type="text" size="40" placeholder="Имя">
+    <input data-bind="textInput: userMiddleName" type="text" size="40" placeholder="Отчество">
+    <input data-bind="textInput: userMobilePhone" type="text" size="40" placeholder="Мобильный">
+    <input data-bind="textInput: userEmail" type="text" size="40" placeholder="Мыло">
+</div>
+<div class="row">
+	<div class="col-md-12">
+		<h2>Данные с севера</h2>
+		<table class="table table-hover">
+			<thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Фамилия</th>
+                    <th scope="col">Имя</th>
+                    <th scope="col">Отчество</th>
+                    <th scope="col">Мобильный</th>
+                    <th scope="col">E-mail</th>
+                </tr>
+			</thead>
+			<tbody data-bind="foreach: users">
+                <tr>
+                    <th scope="row" data-bind="text: Id"></th>
+                    <td data-bind="text: LastName"></td>
+                    <td data-bind="text: FirstName"></td>
+                    <td data-bind="text: MiddleName"></td>
+                    <td data-bind="text: MobilePhone"></td>
+                    <td data-bind="text: Email"></td>
+                </tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+
+@Scripts.Render("~/bundles/projects-view-model")
