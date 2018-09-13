@@ -1,0 +1,36 @@
+﻿<div class="jumbotron">
+	<h1>Домашнее задание: KnockoutJS</h1>
+	<p class="lead">
+		<ul>
+			<li>Переписать приложение ангуляр на нокаут.</li>
+			<li>Дату с сервера преобразовать, добавив +3 дня(momentjs или иной способ), обработав результат функциями из Lodash.</li>
+			<li>Скрипт присылать через страничку MVC бандлом.</li>
+			<li>Придерживаться ES6.</li>
+		</ul>
+		<button data-bind="text: buttonText,
+						   click: clickButton"></button>
+	</p>
+</div>
+<div data-bind="visible: isVisible" class="row">
+	<div class="col-md-12">
+		<h2>Данные с севера</h2>
+		<table class="table table-hover">
+			<thead>
+			<tr>
+				<th scope="col">ID</th>
+				<th scope="col">Название</th>
+				<th scope="col">Дата создания</th>
+			</tr>
+			</thead>
+			<tbody data-bind="foreach: allProjects">
+			<tr>
+				<th scope="row" data-bind="text: Id"></th>
+				<td data-bind="text: Title"></td>
+				<td data-bind="text: DateCreated"></td>
+			</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+
+@Scripts.Render("~/bundles/projects-view-model")
